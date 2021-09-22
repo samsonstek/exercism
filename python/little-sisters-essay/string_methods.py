@@ -15,10 +15,7 @@ def check_sentence_ending(sentence):
     :return:  bool True if punctuated correctly with period, False otherwise.
     """
 
-    for sentence_ending in sentence:
-        if sentence[-1] == ".":
-            return True
-    return False
+    return sentence[-1] == "."
 
 def clean_up_spacing(sentence):
 
@@ -41,4 +38,4 @@ def replace_word_choice(sentence, old_word, new_word):
     :return:  str input sentence with new words in place of old words
     """
 
-    return sentence.replace( old_word, new_word)
+    return sentence.replace(old_word, new_word)
