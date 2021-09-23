@@ -16,9 +16,7 @@ def convert_coordinate(coordinate):
     :return:  tuple - the string coordinate seperated into its individual components.
     """
 
-    return (coordinate[0] , coordinate[1])
-    #optionally
-    #return tuple(coordinate)
+    return tuple(coordinate)
 
 def compare_records(azara_record, rui_record):
 
@@ -28,14 +26,8 @@ def compare_records(azara_record, rui_record):
     :param rui_record: tuple - a (location, coordinate, quadrant) trio.
     :return: bool - True if coordinates match, False otherwise.
     """
-    record_azara = tuple(azara_record[1])
-    record_rui = rui_record[1]
-    if record_azara == record_rui:
-        return True
-    return False
 
-    #optionally
-    # return convert_coordinate(get_coordinate(azara_record)) == rui_record[1]
+    return convert_coordinate(get_coordinate(azara_record)) == rui_record[1]
 
 def create_record(azara_record, rui_record):
 
@@ -65,6 +57,6 @@ def clean_up(combined_record_group):
         treasure_with_data_info[3],
         treasure_with_data_info[4]
         )
-        result = result + str(treasure_with_data_location)+"\n"
-        # Optionally result = result + f"{treasure_with_data_location}"+"\n"
+    
+        result = result + f"{treasure_with_data_location}"+"\n"
     return result
