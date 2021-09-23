@@ -17,6 +17,8 @@ def convert_coordinate(coordinate):
     """
 
     return (coordinate[0] , coordinate[1])
+    #optionally
+    #return tuple(coordinate)
 
 def compare_records(azara_record, rui_record):
 
@@ -31,6 +33,9 @@ def compare_records(azara_record, rui_record):
     if record_azara == record_rui:
         return True
     return False
+
+    #optionally
+    # return convert_coordinate(get_coordinate(azara_record)) == rui_record[1]
 
 def create_record(azara_record, rui_record):
 
