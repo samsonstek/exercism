@@ -58,5 +58,5 @@ def clean_up(combined_record_group):
         treasure_with_data_info[4]
         )
     
-        result = result + f"{treasure_with_data_location}"+"\n"
+        result += f"{treasure_with_data_location}"+"\n"
     return result
